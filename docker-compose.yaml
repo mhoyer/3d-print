@@ -5,7 +5,7 @@ services:
     image: octoprint/octoprint:1.9
     restart: unless-stopped
     ports:
-      - 80:80
+      - 80:5000 # << see: https://github.com/OctoPrint/octoprint-docker/issues/252
     devices:
       - /dev/ttyAMA0:/dev/ttyACM0
     #  - /dev/ttyACM0:/dev/ttyACM0
@@ -39,3 +39,4 @@ services:
 
 volumes:
   octoprint:
+
