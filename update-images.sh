@@ -21,10 +21,10 @@ function fetch_tags() {
   fi
 
   echo "found $1:$latest_tag"
-  sed -i "s|image: ${1}:.*|image: ${1}:${latest_tag}|g" docker-compose.yml
+  sed -i "s|image: ${1}:.*|image: ${1}:${latest_tag}|g" docker-compose.yaml
 }
 
 fetch_tags octoprint/octoprint
 
-git diff docker-compose.yml
+git diff docker-compose.yaml
 
